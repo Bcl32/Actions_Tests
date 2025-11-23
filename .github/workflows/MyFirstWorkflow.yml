@@ -13,8 +13,8 @@ jobs:
     steps:
       - run: |
           echo "Hello ${{ vars.WHO_TO_GREET }} 👋 from ${{ github.actor }}." 
-          echo "My secret is 🤫 ${{ secrets.MY_SECRET }}."
-          echo "Current branch is '${{ github.ref }}'."
+          #echo "My secret is 🤫 ${{ secrets.MY_SECRET }}."
+          #echo "Current branch is '${{ github.ref }}'."
       - name: Checkout
         uses: actions/checkout@v4.1.0
       - run: tree
@@ -26,7 +26,7 @@ jobs:
     steps:
     - run: |
         echo "Hello ${{ vars.WHO_TO_GREET }} 👋 from ${{ github.actor }}." 
-        sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
+        #sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
         #echo "My secret is 🤫 '$sec'."
       
   Load-Test:
@@ -36,7 +36,7 @@ jobs:
     steps:
     - run: |
         echo "Hello ${{ vars.WHO_TO_GREET }} 👋 from ${{ github.actor }}." 
-        sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
+        #sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
         #echo "My secret is 🤫 '$sec'."
         sleep 15
       
@@ -49,6 +49,6 @@ jobs:
     steps:
     - run: |
         echo "Hello ${{ vars.WHO_TO_GREET }} 👋 from ${{ github.actor }}." 
-        sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
+        #sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
         #echo "My secret is 🤫 '$sec'."
         sleep 15
